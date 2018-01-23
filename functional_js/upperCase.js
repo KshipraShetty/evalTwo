@@ -11,3 +11,4 @@ module.exports = upperCase;
 console.log('Check for empty string', upperCase('') === '');
 console.log('Check for lower case', upperCase('abcde') === 'ABCDE');
 console.log('Check for all uppercase', upperCase('ABCDE') === 'ABCDE');
+console.log('Check for number other type input', upperCase() === false);
