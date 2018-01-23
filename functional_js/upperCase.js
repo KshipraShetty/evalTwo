@@ -9,3 +9,5 @@ module.exports = upperCase;
 
 // tdd
 console.log('Check for empty string', upperCase('') === '');
+console.log('Check for lower case', upperCase('abcde') === 'ABCDE');
+console.log('Check for all uppercase', upperCase('ABCDE') === 'ABCDE');
