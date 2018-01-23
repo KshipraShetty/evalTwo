@@ -19,3 +19,5 @@ module.exports = repeat;
 counter = 0;
 
 console.log('Check for base case', repeat(operation, 0) === 0);
+console.log('Check for positive number case', repeat(operation, 5) === 5);
+console.log('Check for -ve numbers', repeat(operation, -1) === false);
