@@ -1,8 +1,6 @@
-console.log(html`<b>${process.argv[2]} says</b>: "${process.argv[3]}"`);
-
 function html(pieces, ...substitutions) {
   let result = pieces[0];
-  for (let i = 0; i < substitutions.length; i += 1) {
+  for (let i = 0; i < substitutions.length; ++i) {
     result += escape(substitutions[i]) + pieces[i + 1];
   }
 
@@ -16,3 +14,6 @@ function escape(s) {
     .replace(/'/g, '&apos;')
     .replace(/"/g, '&quot;');
 }
+// multiple instances of the same unsafe character
+// have one testcase for every unsafe character mentioned in the code
+module.exports = html;
