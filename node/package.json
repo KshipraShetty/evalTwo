@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest filtered-ls.test.js",
+    "test": "jest async-io.test.js",
     "coverage": "jest --coverage"
   },
   "author": "",
@@ -15,7 +15,8 @@
     "eslint-plugin-import": "^2.8.0"
   },
   "dependencies": {
-    "bl": "^1.2.1"
+    "bl": "^1.2.1",
+    "through2-map": "^3.0.0"
   },
   "description": ""
 }

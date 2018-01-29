@@ -18,7 +18,7 @@ function juggling(index) {
         for (let i = 0; i < 3; i += 1) {
           console.log(results[i]);
         }
-      }
+      } return true;
     }));
   });
 }

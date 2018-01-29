@@ -1,13 +1,25 @@
 const async = require('./async-io');
 
-describe('Test for differnt files', () => {
-  test('empty file', () => {
-    expect(async('test-file/zero.txt')).toBe(false);
+describe('Tests for checking  newline characters', () => {
+  test('empty file', (done) => {
+    const callback = (data) => {
+      expect(data).toBe(0);
+      done();
+    };
+    async('test-file/zero.txt', callback);
   });
-  test('file with 3 newlines', () => {
-    expect(async('test-file/file1.txt')).toBe(3);
+  test('file with 3 newlines', (done) => {
+    const callback = (data) => {
+      expect(data).toBe(3);
+      done();
+    };
+    async('test-file/file1.txt', callback);
   });
-  test('file with 4 newlines but no contents', () => {
-    expect(async('test-file/file2.txt')).toBe(4);
+  test('file with 4 newlines but no contents', (done) => {
+    const callback = (data) => {
+      expect(data).toBe(4);
+      done();
+    };
+    async('test-file/file2.txt', callback);
   });
 });
