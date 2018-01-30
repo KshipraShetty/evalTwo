@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest fulfill-a-promise.test.js",
+    "test": "jest reject-a-promise.test.js",
     "coverage": "jest --coverage"
   },
   "author": "",
