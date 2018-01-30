@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest reject-a-promise.test.js",
+    "test": "jest prob5.test.js",
     "coverage": "jest --coverage"
   },
   "author": "",
