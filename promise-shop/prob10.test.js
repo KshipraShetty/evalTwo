@@ -1,5 +1,5 @@
-const alwaysThrows = require('./prob10.js').alwaysThrows;
-const iterate = require('./prob10.js').iterate;
+const alwaysThrows = require('./prob10.js');
+// const iterate = require('./prob10.js').iterate;
 
 global.console = {
   log: jest.fn(),
@@ -7,8 +7,6 @@ global.console = {
 
 describe('Check for alwaysThrows function', () => {
   test('Check if error is thrown', () => {
-    const callbackFn = () => {
-      expect(console.log).toHaveBeenCalledWith('OH NOES');
-    };
+    expect(alwaysThrows).toThrow();
   });
 });
