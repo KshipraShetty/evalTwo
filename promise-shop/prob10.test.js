@@ -9,4 +9,7 @@ describe('Check for alwaysThrows function', () => {
   test('Check if error is thrown', () => {
     expect(alwaysThrows).toThrow();
   });
+  test('Check if error thrown with a specific content', () => {
+    expect(alwaysThrows).toThrow('OH NOES');
+  });
 });
