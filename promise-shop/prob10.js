@@ -2,4 +2,20 @@ function alwaysThrows() {
   throw new Error('OH NOES');
 }
 
-module.exports = alwaysThrows;
+function iterate(value) {
+  return value + 1;
+}
+
+Promise.resolve(iterate(1))
+  .then(iterate)
+  .then(iterate)
+  .then(iterate)
+  .then(iterate)
+  .then(iterate)
+  .then(iterate)
+  .then(iterate)
+  .then(iterate)
+  .then(iterate);
+
+
+module.exports = { alwaysThrows, iterate };
