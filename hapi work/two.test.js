@@ -14,4 +14,11 @@ describe('Check for rout', () => {
       done();
     });
   });
+
+  test('Check for bad request', (done) => {
+    Server.inject('sss', (response) => {
+      expect(response.statusCode).toBe(400);
+      done();
+    });
+  });
 });
