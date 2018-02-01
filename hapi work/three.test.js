@@ -10,12 +10,12 @@ describe('Check for rout', () => {
       done();
     });
   });
-  // test('Check for status', (done) => {
-  //   Server.inject('/handling', (response) => {
-  //     // const fileContents = fs.readFileSync('index.html');
-  //     expect(response.statusCode).toBe(200);
-  //     // console.log(fileContents.toString());
-  //     done();
-  //   });
-  // });
+  test('Check for status', (done) => {
+    Server.inject('/index.html', (response) => {
+      // const fileContents = fs.readFileSync('index.html');
+      expect(response.statusCode).toBe(200);
+      // console.log(fileContents.toString());
+      done();
+    });
+  });
 });
