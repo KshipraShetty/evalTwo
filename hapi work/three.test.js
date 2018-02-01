@@ -12,9 +12,14 @@ describe('Check for rout', () => {
   });
   test('Check for status', (done) => {
     Server.inject('/index.html', (response) => {
-      // const fileContents = fs.readFileSync('index.html');
       expect(response.statusCode).toBe(200);
-      // console.log(fileContents.toString());
+      done();
+    });
+  });
+
+  test('Check for resource not found', (done) => {
+    Server.inject('/abc', (response) => {
+      expect(response.statusCode).toBe(404);
       done();
     });
   });
