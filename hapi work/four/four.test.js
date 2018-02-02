@@ -10,4 +10,10 @@ describe('Check for rout', () => {
       done();
     });
   });
+  test('Check for status', (done) => {
+    Server.inject('/foo/bar/baz/file.html', (response) => {
+      expect(response.statusCode).toBe(200);
+      done();
+    });
+  });
 });
