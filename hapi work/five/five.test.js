@@ -8,4 +8,11 @@ describe('Check for route', () => {
       done();
     });
   });
+  test('Check for contents', (done) => {
+    Server.inject('/?name=Handling', (response) => {
+      const fileContents = fs.readFileSync('//Users/kshiprasshetty/techuniversity/hapi work/five/templates/index.html');
+      expect(response.result).toBe(fileContents.toString());
+      done();
+    });
+  });
 });
