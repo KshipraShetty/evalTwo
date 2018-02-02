@@ -16,4 +16,10 @@ describe('Check for rout', () => {
       done();
     });
   });
+  test('Check for resource not found', (done) => {
+    Server.inject('/abc', (response) => {
+      expect(response.statusCode).toBe(404);
+      done();
+    });
+  });
 });
