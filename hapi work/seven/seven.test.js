@@ -10,7 +10,7 @@ describe('Check for route', () => {
   });
   test('Check for contents', (done) => {
     Server.inject('/?name=all&suffix=welcome', (response) => {
-      expect(response.result).toMatch('Hello all welcome');
+      expect(response.result).toMatch('<html>\n    <head><title>Hello</title></head>\n    <body>\n        Hello\n    </body>\n</html>');
       done();
     });
   });
