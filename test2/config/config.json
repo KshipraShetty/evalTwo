@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "kshiprasshetty",
+    "password": null,
+    "database": "books",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "kshiprasshetty",
+    "password": null,
+    "database": "test_books",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
