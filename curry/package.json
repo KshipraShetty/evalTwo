@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest program4.test.js",
+    "test": "jest program5.test.js",
     "coverage": "jest --coverage"
   },
   "author": "",

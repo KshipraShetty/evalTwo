@@ -10,7 +10,6 @@ describe('Check for route', () => {
   });
   test('Check for contents', (done) => {
     Server.inject('/?name=the handling', (response) => {
-      const fileContents = fs.readFileSync('//Users/kshiprasshetty/techuniversity/hapi work/five/templates/index.html');
       expect(response.result).toMatch('Hello the handling');
       done();
     });
